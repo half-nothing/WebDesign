@@ -12,7 +12,7 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">首页</a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary">{{$t('title.home')}}</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">人物基本信息</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">人物武力值分析</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">人物学识能力分析</a></li>
@@ -37,4 +37,7 @@
 </template>
 
 <style scoped lang="scss">
+* {
+    user-select: none;
+}
 </style>
