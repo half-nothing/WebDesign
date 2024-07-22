@@ -3,9 +3,9 @@
 </script>
 
 <template>
-
+人物基本信息
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
