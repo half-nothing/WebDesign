@@ -1,11 +1,8 @@
 <script setup>
-
-</script>
-
-<script>
-export default {
-    props: ['width', 'height']
-}
+const props = defineProps({
+    width: String,
+    height: String
+})
 </script>
 
 <template>

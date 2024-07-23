@@ -1,52 +1,45 @@
-<script>
-export default {
-    name: 'Header',
-    data: () => {
-        return {
-            nowPage: 0,
-            pages: [
-                {
-                    id: 0,
-                    path: "/",
-                    name: "主页"
-                }, {
-                    id: 1,
-                    path: "/info",
-                    name: "人物基本信息"
-                }, {
-                    id: 2,
-                    path: "/force",
-                    name: "人物武力值分析"
-                }, {
-                    id: 3,
-                    path: "/knowledge",
-                    name: "人物学识能力分析"
-                }, {
-                    id: 4,
-                    path: "/relation",
-                    name: "人物关系网"
-                }, {
-                    id: 5,
-                    path: "/compare",
-                    name: "人物数值对比"
-                }, {
-                    id: 6,
-                    path: "/scene",
-                    name: "战斗场景管理"
-                }, {
-                    id: 7,
-                    path: "/stats",
-                    name: "战绩"
-                },
-            ]
-        }
+<script setup>
+let nowPage = 0;
+const pages = [
+    {
+        id: 0,
+        path: "/",
+        name: "主页"
+    }, {
+        id: 1,
+        path: "/info",
+        name: "人物基本信息"
+    }, {
+        id: 2,
+        path: "/force",
+        name: "人物武力值分析"
+    }, {
+        id: 3,
+        path: "/knowledge",
+        name: "人物学识能力分析"
+    }, {
+        id: 4,
+        path: "/relation",
+        name: "人物关系网"
+    }, {
+        id: 5,
+        path: "/compare",
+        name: "人物数值对比"
+    }, {
+        id: 6,
+        path: "/scene",
+        name: "战斗场景管理"
+    }, {
+        id: 7,
+        path: "/stats",
+        name: "战绩"
     },
-    methods: {
-        changePage(page) {
-            this.nowPage = page;
-        }
-    }
+]
+
+function changePage(page) {
+    nowPage = page;
 }
+
 </script>
 
 <template>
