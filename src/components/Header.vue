@@ -1,4 +1,52 @@
-<script setup>
+<script>
+export default {
+    name: 'Header',
+    data: () => {
+        return {
+            nowPage: 0,
+            pages: [
+                {
+                    id: 0,
+                    path: "/",
+                    name: "主页"
+                }, {
+                    id: 1,
+                    path: "/info",
+                    name: "人物基本信息"
+                }, {
+                    id: 2,
+                    path: "/force",
+                    name: "人物武力值分析"
+                }, {
+                    id: 3,
+                    path: "/knowledge",
+                    name: "人物学识能力分析"
+                }, {
+                    id: 4,
+                    path: "/relation",
+                    name: "人物关系网"
+                }, {
+                    id: 5,
+                    path: "/compare",
+                    name: "人物数值对比"
+                }, {
+                    id: 6,
+                    path: "/scene",
+                    name: "战斗场景管理"
+                }, {
+                    id: 7,
+                    path: "/stats",
+                    name: "战绩"
+                },
+            ]
+        }
+    },
+    methods: {
+        changePage(page) {
+            this.nowPage = page;
+        }
+    }
+}
 </script>
 
 <template>
@@ -12,14 +60,13 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><router-link class="nav-link px-2 text-secondary" to="/">主页</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/info">人物基本信息</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/force">人物武力值分析</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/knowledge">人物学识能力分析</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/relation">人物关系网</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/compare">人物数值对比</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/scene">战斗场景管理</router-link></li>
-                    <li><router-link class="nav-link px-2 text-white" to="/stats">战绩</router-link></li>
+                    <li v-for="item in pages">
+                        <router-link class="nav-link px-2"
+                                     :class="nowPage === item.id ? 'text-secondary' : 'text-white'"
+                                     :to="item.path"
+                                     @click="changePage(item.id)">{{ item.name }}
+                        </router-link>
+                    </li>
                 </ul>
 
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
