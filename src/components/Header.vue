@@ -34,7 +34,7 @@ const pages = [
     }, {
         id: 7,
         path: "/hero-rune",
-        name: "符文推荐"
+        name: "符文模拟"
     }
 ]
 
