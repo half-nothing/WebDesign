@@ -7,7 +7,6 @@ import HeroRune from "@components/menu/HeroRune.vue";
 import HeroStory from "@components/menu/HeroStory.vue";
 import Strengths from "@components/menu/Strengths.vue";
 import WinRate from "@components/menu/WinRate.vue";
-import Login from "@components/menu/Login.vue";
 
 const routes = [
     {
@@ -16,7 +15,7 @@ const routes = [
         component: Home
     },
     {
-        path: "/info",
+        path: "/icon",
         name: "HeroInfo",
         component: HeroInfo
     },
@@ -49,11 +48,6 @@ const routes = [
         path: "/win-rate",
         name: "WinRate",
         component: WinRate
-    },
-    {
-        path: "/login",
-        name: "Login",
-        component: Login
     }
 ]
 

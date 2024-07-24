@@ -13,7 +13,7 @@ const props = defineProps({
 
 <style scoped>
 div {
-    margin: 0 25px;
+    margin: 10px;
     border: 2px solid #738bbd;
     box-shadow: 2px 2px 2px #67b7e4;
     border-radius: 5px;

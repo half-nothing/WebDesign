@@ -11,7 +11,8 @@ div#app {
   //background-color: $bg_color;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 div#app {
@@ -19,19 +20,20 @@ div#app {
   flex-direction: column;
 }
 
-.form-control-dark {
-  border-color: var(--bs-gray);
+*::-webkit-scrollbar {
+  width: 8px;
 }
 
-.form-control-dark:focus {
-  border-color: #fff;
-  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+*::-webkit-scrollbar-track {
+  background: #efefef;
+  border-radius: 2px;
 }
 
-.text-small {
-  font-size: 85%;
+*::-webkit-scrollbar-thumb {
+  background: #40a0ff49;
+  border-radius: 10px;
 }
 
-.dropdown-toggle {
-  outline: 0;
+*::-webkit-scrollbar-thumb:hover {
+  background: #40a0ff;
 }

@@ -1,6 +1,7 @@
-<script src="../router/index.js"></script>
 <script setup>
-let nowPage = 0;
+import {useMainStore} from "@/store/index.js";
+
+const mainStore = useMainStore();
 const pages = [
     {
         id: 0,
@@ -8,7 +9,7 @@ const pages = [
         name: "主页"
     }, {
         id: 1,
-        path: "/info",
+        path: "/icon",
         name: "人物基本信息"
     }, {
         id: 2,
@@ -20,8 +21,8 @@ const pages = [
         name: "人物出装攻略"
     }, {
         id: 4,
-        path: "/hero-rune",
-        name: "符文推荐"
+        path: "/win-rate",
+        name: "随时间胜率变化"
     }, {
         id: 5,
         path: "/hero-story",
@@ -32,14 +33,10 @@ const pages = [
         name: "人物优劣势"
     }, {
         id: 7,
-        path: "/win-rate",
-        name: "随时间胜率变化"
-    },
+        path: "/hero-rune",
+        name: "符文推荐"
+    }
 ]
-
-function changePage(page) {
-    nowPage = page;
-}
 
 </script>
 
@@ -47,18 +44,12 @@ function changePage(page) {
     <div class=".container">
         <header class="p-3 text-bg-dark">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap"/>
-                    </svg>
-                </a>
-
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                     <li v-for="item in pages">
                         <router-link class="nav-link px-2"
-                                     :class="nowPage === item.id ? 'text-secondary' : 'text-white'"
+                                     :class="mainStore.nowPage === item.id ? 'text-secondary' : 'text-white'"
                                      :to="item.path"
-                                     @click="changePage(item.id)">{{ item.name }}
+                                     @click="mainStore.updatePage(item.id)">{{ item.name }}
                         </router-link>
                     </li>
                 </ul>
@@ -67,11 +58,6 @@ function changePage(page) {
                     <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
                            aria-label="Search">
                 </form>
-
-                <div class="text-end">
-                    <router-link class="btn btn-outline-light me-2" to="/login">Login</router-link>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
-                </div>
             </div>
         </header>
     </div>
@@ -80,5 +66,11 @@ function changePage(page) {
 <style scoped lang="scss">
 * {
     user-select: none;
+}
+
+@media (max-width: 1270px) {
+    form {
+        display: none;
+    }
 }
 </style>

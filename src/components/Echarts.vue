@@ -25,7 +25,7 @@ onBeforeUnmount(() => {
     myChart.dispose();
 });
 
-watch(props.option, () => {
+watch(() => props.option, () => {
     myChart.setOption(props.option, true)
 });
 
