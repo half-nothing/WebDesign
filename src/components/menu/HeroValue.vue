@@ -3,7 +3,7 @@
 </script>
 
 <template>
-人物学识能力分析
+人物数值分析
 </template>
 
 <style scoped lang="scss">

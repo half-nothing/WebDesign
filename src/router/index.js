@@ -1,12 +1,12 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 import Home from "@components/menu/Home.vue";
-import Info from "@components/menu/Info.vue";
-import Force from "@components/menu/Force.vue";
-import Knowledge from "@components/menu/Knowledge.vue";
-import Relation from "@components/menu/Relation.vue";
-import Compare from "@components/menu/Compare.vue";
-import Scene from "@components/menu/Scene.vue";
-import Stats from "@components/menu/Stats.vue";
+import HeroInfo from "@components/menu/HeroInfo.vue";
+import HeroValue from "@components/menu/HeroValue.vue";
+import HeroStrategy from "@components/menu/HeroStrategy.vue";
+import HeroRune from "@components/menu/HeroRune.vue";
+import HeroStory from "@components/menu/HeroStory.vue";
+import Strengths from "@components/menu/Strengths.vue";
+import WinRate from "@components/menu/WinRate.vue";
 import Login from "@components/menu/Login.vue";
 
 const routes = [
@@ -17,38 +17,38 @@ const routes = [
     },
     {
         path: "/info",
-        name: "Info",
-        component: Info
+        name: "HeroInfo",
+        component: HeroInfo
     },
     {
-        path: "/force",
-        name: "Force",
-        component: Force
+        path: "/hero-value",
+        name: "HeroValue",
+        component: HeroValue
     },
     {
-        path: "/knowledge",
-        name: "Knowledge",
-        component: Knowledge
+        path: "/hero-strategy",
+        name: "HeroStrategy",
+        component: HeroStrategy
     },
     {
-        path: "/relation",
-        name: "Relation",
-        component: Relation
+        path: "/hero-rune",
+        name: "HeroRune",
+        component: HeroRune
     },
     {
-        path: "/compare",
-        name: "Compare",
-        component: Compare
+        path: "/hero-story",
+        name: "HeroStory",
+        component: HeroStory
     },
     {
-        path: "/scene",
-        name: "Scene",
-        component: Scene
+        path: "/strengths",
+        name: "Strengths",
+        component: Strengths
     },
     {
-        path: "/stats",
-        name: "Stats",
-        component: Stats
+        path: "/win-rate",
+        name: "WinRate",
+        component: WinRate
     },
     {
         path: "/login",

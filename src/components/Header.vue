@@ -1,3 +1,4 @@
+<script src="../router/index.js"></script>
 <script setup>
 let nowPage = 0;
 const pages = [
@@ -11,28 +12,28 @@ const pages = [
         name: "人物基本信息"
     }, {
         id: 2,
-        path: "/force",
-        name: "人物武力值分析"
+        path: "/hero-value",
+        name: "人物数值分析"
     }, {
         id: 3,
-        path: "/knowledge",
-        name: "人物学识能力分析"
+        path: "/hero-strategy",
+        name: "人物出装攻略"
     }, {
         id: 4,
-        path: "/relation",
-        name: "人物关系网"
+        path: "/hero-rune",
+        name: "符文推荐"
     }, {
         id: 5,
-        path: "/compare",
-        name: "人物数值对比"
+        path: "/hero-story",
+        name: "人物背景故事"
     }, {
         id: 6,
-        path: "/scene",
-        name: "战斗场景管理"
+        path: "/strengths",
+        name: "人物优劣势"
     }, {
         id: 7,
-        path: "/stats",
-        name: "战绩"
+        path: "/win-rate",
+        name: "随时间胜率变化"
     },
 ]
 

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-战斗场景管理
+人物背景故事
 </template>
 
 <style scoped lang="scss">

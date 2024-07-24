@@ -3,7 +3,7 @@
 </script>
 
 <template>
-人物武力值分析
+人物优劣势
 </template>
 
 <style scoped lang="scss">

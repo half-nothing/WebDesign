@@ -3,7 +3,7 @@
 </script>
 
 <template>
-战绩
+人物优劣势
 </template>
 
 <style scoped lang="scss">

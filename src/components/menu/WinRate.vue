@@ -3,7 +3,7 @@
 </script>
 
 <template>
-人物数值对比
+随时间胜率变化
 </template>
 
 <style scoped lang="scss">
